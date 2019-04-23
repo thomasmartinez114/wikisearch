@@ -1,0 +1,20 @@
+* {
+    background-color: white;
+}
+
+#main-container {
+    text-align: center;
+    margin: auto;
+}
+
+li{
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 0;
+}
+
+a:visited {
+    text-decoration: none;
+}
