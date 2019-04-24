@@ -18,3 +18,23 @@ li{
 a:visited {
     text-decoration: none;
 }
+
+.title {
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#submit {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+#input {
+    width: 200px;
+    border-radius: 5px;
+}
+
+li {
+    font-family: 'Playfair Display', serif;
+}

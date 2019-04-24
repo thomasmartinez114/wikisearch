@@ -6,7 +6,6 @@ const response = ['apple', 'banana', 'orange'];
 // Click handler
 function handleClick() {
     console.log('button is clicked');
-    document.getElementById('input').value
     makeAPIcall();
 }
 
