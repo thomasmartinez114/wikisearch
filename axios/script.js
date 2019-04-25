@@ -36,8 +36,8 @@ function displayResults(titles, info, links) {
 
     // titles.map goes through each element in the array
 
-    const newResponse = titles.map(function(item, index, links) {
-        console.log(info);
+    const newResponse = titles.map(function(item, index) {
+        console.log(item);
         // return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
         return `<div class='info-search'><li><a class='info-desc' href=${links[index]}>${item}</a><br>${info}</li></div>`;
     });
