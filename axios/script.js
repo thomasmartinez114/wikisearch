@@ -1,7 +1,5 @@
-// global fetch below will make fetch error go away
-/* global fetch */
-
-const response = ['apple', 'banana', 'orange'];
+/*global axios*/
+// const axios = require('axios');
 
 // Click handler
 function handleClick() {
@@ -15,22 +13,30 @@ function makeAPIcall() {
     console.log(input);
     const url = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&search=${input}&limit=10&namespace=0&format=json`
 
-    fetch(url)
-        .then(function(response) {
-            return response.json()
+    axios.get(url)
+        .then((response) => {
+            return response;
         })
-        .then(function(response) {
-            console.log(response);
-            // response[1] is displaying the Titles
-            displayResults(response[1], response[3]);
+        .catch((error) => {
+            console.log(error);
         });
+
+    // fetch(url)
+    //     .then(function(response) {
+    //         return response.json()
+    //     })
+    //     .then(function(response) {
+    //         console.log(response);
+    //         // response[1] is displaying the Titles
+    //         displayResults(response[1], response[3]);
+    //     });
 }
 
 // this function displays results(a array) on the page as a list
 function displayResults(titles, links) {
 
     // titles.map goes through each element in the array
-    
+
     const newResponse = titles.map(function(item, index) {
         console.log(item);
         return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
