@@ -36,10 +36,10 @@ function displayResults(titles, info, links) {
 
     // titles.map goes through each element in the array
 
-    const newResponse = titles.map(function(item, index) {
+    const newResponse = titles.map(function(item, index, links) {
         console.log(info);
         // return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
-        return `<li><a href=${links[index]}>${item}</a><br>${info}</li>`;
+        return `<div class='info-search'><li><a class='info-desc' href=${links[index]}>${item}</a><br>${info}</li></div>`;
     });
     
     const joinedResponse = newResponse.join('');

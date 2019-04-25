@@ -41,6 +41,23 @@ li {
 
 }
 
-ul {
+.info-container {
+    display: flex;
+}
 
+.info-search {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 400px;
+}
+
+.info-desc {
+    font-weight: bold;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
 }
