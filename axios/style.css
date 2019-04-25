@@ -49,15 +49,19 @@ li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 800px;
-    height: 400px;
+    width: 450px;
+    border: 2px solid black;
 }
 
 .info-desc {
     font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #results {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
