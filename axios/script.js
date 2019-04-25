@@ -1,4 +1,4 @@
-/*global axios*/
+/*gloabl axios*/
 // const axios = require('axios');
 
 // Click handler
@@ -10,14 +10,13 @@ function handleClick() {
 function makeAPIcall() {
 
     const input = document.getElementById('input').value;
-    console.log(input);
-    const url = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&search=${input}&limit=10&namespace=0&format=json`
+    const url = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&search=${input}&limit=10&namespace=0&format=json`;
 
     axios.get(url)
-        .then((response) => {
-            return response;
+        .then(function(response) {
+            displayResults(response.data[1], response.data[2], response.data[3]);
         })
-        .catch((error) => {
+        .catch(function(error) {
             console.log(error);
         });
 
@@ -33,14 +32,16 @@ function makeAPIcall() {
 }
 
 // this function displays results(a array) on the page as a list
-function displayResults(titles, links) {
+function displayResults(titles, links, description) {
 
     // titles.map goes through each element in the array
 
     const newResponse = titles.map(function(item, index) {
-        console.log(item);
-        return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
+        console.log(description);
+        // return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
+        return `<li><a href=${links[index]}>${item}</a><br>${description}</li>`;
     });
+    
     const joinedResponse = newResponse.join('');
     console.log(joinedResponse);
 
