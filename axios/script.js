@@ -39,7 +39,7 @@ function displayResults(titles, info, links) {
     const newResponse = titles.map(function(item, index) {
         console.log(item);
         // return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
-        return `<div class='info-search'><li><a class='info-desc' href=${links[index]}>${item}</a><br></li><p>${info[index]}</p></div>`;
+        return `<div class='info-search'><li><a class='info-links' href=${links[index]}>${item}</a><br></li><p class='info-desc'>${info[index]}</p></div>`;
     });
     
     const joinedResponse = newResponse.join('');

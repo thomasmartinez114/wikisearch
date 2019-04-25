@@ -7,16 +7,12 @@
     margin: auto;
 }
 
-li{
+li {
     list-style-type: none;
     text-align: center;
     text-decoration: none;
     margin: auto;
     padding: 0;
-}
-
-a:visited {
-    text-decoration: none;
 }
 
 .title {
@@ -53,15 +49,27 @@ li {
     border: 2px solid black;
 }
 
-.info-desc {
+.info-links {
     font-weight: bold;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.info-desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -10px
+}
+
 #results {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-image: url('../images/internetOfThings.jpg');
+}
+
+a:visited {
+    color: blue;
 }
