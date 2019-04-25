@@ -32,14 +32,14 @@ function makeAPIcall() {
 }
 
 // this function displays results(a array) on the page as a list
-function displayResults(titles, links, description) {
+function displayResults(titles, info, links) {
 
     // titles.map goes through each element in the array
 
     const newResponse = titles.map(function(item, index) {
-        console.log(description);
+        console.log(info);
         // return '<li>' + '<a href=' + links[index] + '>' + item + '</a>' + '</li>'
-        return `<li><a href=${links[index]}>${item}</a><br>${description}</li>`;
+        return `<li><a href=${links[index]}>${item}</a><br>${info}</li>`;
     });
     
     const joinedResponse = newResponse.join('');
@@ -50,3 +50,5 @@ function displayResults(titles, links, description) {
 
 
 // display title, snippit of the code, and the page link
+
+
